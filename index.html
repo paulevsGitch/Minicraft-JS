@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<style>
+			body {
+				overflow: hidden;
+				background-color: black;
+				margin: 0;
+				padding: 0;
+			}
+			canvas {
+				<!--width: 100%;
+				height: 100%;-->
+				image-rendering: -moz-crisp-edges;
+				image-rendering: -webkit-crisp-edges;
+				image-rendering: pixelated;
+				image-rendering: crisp-edges;
+			}
+			.hotbar {
+				position: absolute;
+				background: #555;
+				border: 2px solid #ccc;
+			}
+			.hotbar_sel {
+				position: absolute;
+				border: 5px solid #0F0;
+				width: 64px;
+				height: 64px;
+			}
+			.loading {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				height: 100%;
+				background: black;
+				color: white;
+				font-size: 200%;
+				text-align: center;
+				vertical-align: middle;
+			}
+			.progress {
+				width: 400px;
+				height: 40px;
+				background: linear-gradient(to right, green 0%, black 0%);
+				text-align: center;
+				font-size: 36px;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="myCanvas"></canvas>
+		<div class="hotbar" id="hotbar_div">
+			<table id="hotbar">
+				<tr>
+				</tr>
+			</table>
+		</div>
+		<div class="hotbar_sel" id="hotbar_sel"></div>
+		<div class="loading" id="loading">
+		<table class="loading">
+			<tr>
+				<td>
+					<h1 id="header">Loading</h1>
+					<div class="progress" id="progress">0%</div>
+				</td>
+			</tr>
+		</table>
+		</div>
+		
+		<script src="init.js"></script>
+	</body>
+</html>
